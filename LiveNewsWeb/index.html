@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>PC Home</title>
+</head>
+<body>
+	<section class="maintop">
+		<div class="top">
+			<p class="ne">news</p>
+			<p class="acc">account</p>
+			<p class="acc">gingiangiallo</p>
+			<p class="agg">ultimo aggiornamento 6 min fa</p>
+		</div>
+	</section>
+	<section class="mainpag">
+		<div id="schedetube" style="display: none">
+			<div class="scheda1">
+				<div id="results">
+					<div class="item">				
+						<iframe class="video w100" width="640" height="360" src="	//www.youtube.com/embed/{{videoid}}" frameborder="0" 	allowfullscreen>
+						</iframe>
+						<h2>{{title}}</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="schedetwitch" style="display: none">
+			<div class="scheda1">
+				<div class="contsche">
+					<h3>Titolo</h3>
+					<div class="testosche">
+						<div class="cont">
+							<img src="twitchimg.jpg">
+						</div>
+						<h5>testo video ty</h5>
+					</div>
+				</div>
+			</div>
+			<div class="scheda1">
+				<div class="contsche">
+					<h3>Titolo</h3>
+					<div class="testosche">
+						<div class="cont">
+							<img src="twitchimg.jpg">
+						</div>
+						<h5>testo video ty</h5>
+					</div>
+				</div>
+			</div>
+			<div class="scheda1">
+				<div class="contsche">
+					<h3>Titolo</h3>
+					<div class="testosche">
+						<div class="cont">
+							<img src="twitchimg.jpg">
+						</div>
+						<h5>testo video ty</h5>
+					</div>
+				</div>
+			</div>
+			<div class="scheda1">
+				<div class="contsche">
+					<h3>Titolo</h3>
+					<div class="testosche">
+						<div class="cont">
+							<img src="twitchimg.jpg">
+						</div>
+						<h5>testo video ty</h5>
+					</div>
+				</div>
+			</div>
+			<div class="scheda1">
+				<div class="contsche">
+					<h3>Titolo</h3>
+					<div class="testosche">
+						<div class="cont">
+							<img src="twitchimg.jpg">
+						</div>
+						<h5>testo video ty</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<form action="#">
+				<input style="display: none" type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" />
+				<input type="submit" value="Search" class="navico home yt" onclick="showtube()" class="form-control btn btn-primary w100">
+			</form>
+			<button class="navico home yt" onclick="showtube()">YT</button>
+			<button class="navico home tw" onclick="showtwitch()">TW</button>
+		</div>
+	</section>
+
+	<script>
+		function showtube() {
+			var yt = document.getElementById("schedetube");
+			var tw = document.getElementById("schedetwitch");
+			if (yt.style.display === "none") {
+				yt.style.display = "flex";
+				tw.style.display = "none";
+			}
+		}
+		function showtwitch() {
+			var yt = document.getElementById("schedetube");
+			var tw = document.getElementById("schedetwitch");
+			if (tw.style.display === "none") {
+				tw.style.display = "flex";
+				yt.style.display = "none";
+			}
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="youtubeapi/js/app.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+</body>
+</html>
